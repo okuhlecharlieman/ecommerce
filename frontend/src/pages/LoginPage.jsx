@@ -1,10 +1,12 @@
-import React from 'react'
-import  Login  from "../components/Login/Login.jsx";
+import React from "react";
+import Login from "../components/Login/Login.jsx";
 
 function LoginPage() {
   return (
-    <div><Login/></div>
-  )
+    <div>
+      <Login />
+    </div>
+  );
 }
 
-export default LoginPage
+export default LoginPage;
