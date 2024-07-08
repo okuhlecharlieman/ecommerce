@@ -1,3 +1,4 @@
+const connectDatabase = require("./db/Database");
 const app = require("./app");
 
 process.on("uncaughtException", (err) => {
@@ -10,6 +11,8 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "config/.env" });
   console.log(".env activated!!!");
 }
+//Connect db
+connectDatabase();
 
 //Create server
 const server = app.listen(process.env.PORT, () => {
